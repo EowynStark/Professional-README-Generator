@@ -60,7 +60,7 @@ function writeToFile() {
         .then((answers) =>{
             const markdownContent = generateMarkdown(answers);
             if (markdownContent !== undefined) {
-            fs.writeFile('README.md', markdownContent);
+            fs.writeFileSync('README.md', markdownContent);
             console.log('README.md created successfully!');
         } else {
             console.error('Error: Markdown content is undefined.');
